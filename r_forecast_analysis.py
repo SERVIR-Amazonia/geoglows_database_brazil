@@ -15,7 +15,7 @@ warnings.filterwarnings('ignore')
 user = os.getlogin()
 user_dir = os.path.expanduser('~{}'.format(user))
 os.chdir(user_dir)
-os.chdir("tethys_apps_brazil/backend-geoglows_brazil")
+os.chdir("tethys_apps_brazil/geoglows_database_brazil")
 
 # Import enviromental variables
 load_dotenv()
