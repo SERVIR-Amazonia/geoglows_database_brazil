@@ -409,7 +409,9 @@ for i in range(n):
         print(temp_data.shape)
         # Define the table and delete if exist
         table = 'sf_{0}'.format(code)
+        print("Start drop database")
         conn.execute("DROP TABLE IF EXISTS {0};".format(table))
+        print("End drop database")
         temp_data.to_sql(table, con=conn, if_exists='replace', index=True)
     except:
         print("Error downloading data in station {0}".format(code))
